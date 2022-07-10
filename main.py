@@ -8,10 +8,9 @@ line_separator = "//"
 
 def main():
     for x in os.listdir(path):
-        if x.endswith(".jpg"):
-            image = Image.open(path + line_separator + x)
-            image.thumbnail((512, 512))
-            image.save(new_path + x.rsplit('.', maxsplit=1)[0] + ".png")
+        image = Image.open(path + line_separator + x)
+        image.thumbnail((512, 512))
+        image.save(new_path + x.rsplit('.', maxsplit=1)[0] + ".png")
 
 
 if __name__ == '__main__':
